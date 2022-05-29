@@ -1,4 +1,5 @@
 // Imports
+import './style.css';
 import { months } from './test.js';
 
 // Excecute
