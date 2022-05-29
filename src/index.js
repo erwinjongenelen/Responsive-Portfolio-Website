@@ -6,6 +6,6 @@ const btn = document.getElementById('secret-btn');
 btn.addEventListener('click', displayAlert);
 
 function displayAlert() {
-	alert('SECRET!');
+	alert('SECRET!!!!');
 	console.log(months);
 }
