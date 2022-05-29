@@ -1,0 +1,9 @@
+@import './abstracts/variables';
+
+h1 {
+    color: $primary;
+
+    &:hover {
+        color: $secondary;
+    }
+}

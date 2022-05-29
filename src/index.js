@@ -1,6 +1,6 @@
 // Imports
-import './style.scss';
-import { months } from './test.js';
+import './css/main.scss';
+import { months } from './js/test.js';
 
 // Excecute
 const btn = document.getElementById('secret-btn');
