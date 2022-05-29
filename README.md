@@ -13,6 +13,8 @@ https://www.behance.net/gallery/19502367/SNDSGN-Free-Psd
 * CSS3
 * SASS / SCSS
 * Javascript
+* Webpack 5
+* Babel
 * Git
 * GitHub
 
