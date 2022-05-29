@@ -1,11 +1,11 @@
 // Imports
-import {months} from './test.js';
+import { months } from './test.js';
 
 // Excecute
 const btn = document.getElementById('secret-btn');
 btn.addEventListener('click', displayAlert);
 
 function displayAlert() {
-	alert('SECRET!!');
+	alert('SECRET!');
 	console.log(months);
 }
