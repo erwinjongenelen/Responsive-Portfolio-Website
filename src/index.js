@@ -1,5 +1,6 @@
 // Imports
 import './css/main.scss';
+import bootstrap from 'bootstrap';
 import { months } from './js/test.js';
 
 // Excecute

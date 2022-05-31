@@ -1,11 +1,16 @@
+// FontAwesome
 @import '../../node_modules/@fortawesome/fontawesome-free/css/all.css';
+
+// Bootstrap
+@import "../../node_modules/bootstrap/scss/functions";
 @import './abstracts/variables';
+@import "../../node_modules/bootstrap/scss/bootstrap";
 
-h1 {
-    color: $primary;
-    font-family: 'Montserrat', sans-serif;
+// h1 {
+//     color: $primary;
+//     font-family: 'Montserrat', sans-serif;
 
-    &:hover {
-        color: $secondary;
-    }
-}
+//     &:hover {
+//         color: $secondary;
+//     }
+// }
