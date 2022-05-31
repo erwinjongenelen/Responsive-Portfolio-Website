@@ -1,7 +1,9 @@
+@import '../../node_modules/@fortawesome/fontawesome-free/css/all.css';
 @import './abstracts/variables';
 
 h1 {
     color: $primary;
+    font-family: 'Montserrat', sans-serif;
 
     &:hover {
         color: $secondary;

@@ -2,11 +2,14 @@
 <html>
   <head>
     <title><%= htmlWebpackPlugin.options.title %></title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
   </head>
   <body>
     <div>
       <h1><%= htmlWebpackPlugin.options.title %></h1>
-
+      <i class="fa-solid fa-house"></i>
       <img src="<%=require('./assets/images/walle.jpg')%>" />
 
       <div id="app">Hello world!!</div>
