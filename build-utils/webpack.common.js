@@ -65,7 +65,7 @@ export default {
     }),
     // Extracts CSS into separate files
     new MiniCssExtractPlugin({
-      filename: "[name].css",
+      filename: "[name].[contenthash].css",
       chunkFilename: "[id].css"
     }),
   ],
