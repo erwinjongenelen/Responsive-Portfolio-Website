@@ -1,26 +1,57 @@
-const path = require('path');
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+import path from "path"
+import MiniCssExtractPlugin from "mini-css-extract-plugin"
+import HtmlWebpackPlugin from "html-webpack-plugin"
+import { CleanWebpackPlugin } from "clean-webpack-plugin"
 
-module.exports = {
+export default {
   entry: {
-    bundle: path.resolve(__dirname, '..', './src/index.js'),
+    bundle: "./src/index.js",
   },
   module: {
     rules: [
+      // Use babel for JS files
       {
-        test: /\.(js)$/,
-        exclude: /node_modules/,
-        use: ['babel-loader']
+        test: /\.js$/,
+        exclude: /(node_modules)/,
+        use: {
+          loader: "babel-loader",
+          options: {
+            presets: [
+              "@babel/preset-env"
+            ]
+          }
+        }
       },
+      // CSS, PostCSS, and Sass
       {
         test: /\.(scss|css)$/,
-        use: ['style-loader', 'css-loader', 'sass-loader'],
+        use: [
+          MiniCssExtractPlugin.loader,
+          {
+            loader: "css-loader",
+            options: {
+              importLoaders: 2,
+              sourceMap: true,
+            }
+          },
+          {
+            loader: "postcss-loader",
+            options: {
+              postcssOptions: {
+                plugins: [
+                  "autoprefixer",
+                ]
+              }
+            }
+          },
+          "sass-loader"
+        ],
       },
+      // File loader for images and fonts
       {
-        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        test: /\.(jpe?g|svg|png|gif|ico|eot|ttf|woff2?)(\?v=\d+\.\d+\.\d+)?$/i,
         type: 'asset/resource',
-      }
+      },
     ]
   },
   resolve: {
@@ -29,12 +60,17 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
-      title: 'Hello Webpack bundled JavaScript Project',
-      template: path.resolve(__dirname, '..', './src/index.html'),
-    })
+      title: 'Responsive Portfolio Website',
+      template: path.resolve(process.cwd(), "./src/index.html"),
+    }),
+    // Extracts CSS into separate files
+    new MiniCssExtractPlugin({
+      filename: "[name].css",
+      chunkFilename: "[id].css"
+    }),
   ],
   output: {
-    path: path.resolve(__dirname, '..', './dist')
+    path: path.resolve(process.cwd(), "./dist"),
   },
   devServer: {
     open: true,

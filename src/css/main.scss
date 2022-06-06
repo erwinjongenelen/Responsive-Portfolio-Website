@@ -1,12 +1,13 @@
 // FontAwesome
-@import '../../node_modules/@fortawesome/fontawesome-free/css/all.css';
+$fa-font-path:  '~@fortawesome/fontawesome-free/webfonts';
+@import '~@fortawesome/fontawesome-free/css/all.css';
 
 // Bootstrap functions & Overrides
-@import "../../node_modules/bootstrap/scss/functions";
+@import "~bootstrap/scss/functions";
 @import './abstracts/variables';
 
 // Bootstrap
-@import "../../node_modules/bootstrap/scss/bootstrap";
+@import "~bootstrap/scss/bootstrap";
 
 // h1 {
 //     color: $primary;

@@ -1,14 +1,6 @@
-module.exports = {
+export default {
     mode: 'development',
-    devtool: 'eval-source-map',
-    module: {
-        rules: [
-            {
-                test: /\.(css)$/,
-                use: ['style-loader', 'css-loader'],
-            },
-        ],
-    },
+    devtool: 'source-map',
     output: {
         filename: '[name].js'
     }
