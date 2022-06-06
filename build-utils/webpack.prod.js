@@ -2,7 +2,6 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
     mode: 'production',
-    devtool: 'source-map',
     module: {
         rules: [
             {
@@ -13,6 +12,9 @@ module.exports = {
                 ],
             },
         ],
+    },
+    output: {
+        filename: '[name].[contenthash].js'
     },
     plugins: [
         new MiniCssExtractPlugin(),

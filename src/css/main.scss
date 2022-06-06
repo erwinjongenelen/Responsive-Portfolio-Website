@@ -1,9 +1,11 @@
 // FontAwesome
 @import '../../node_modules/@fortawesome/fontawesome-free/css/all.css';
 
-// Bootstrap
+// Bootstrap functions & Overrides
 @import "../../node_modules/bootstrap/scss/functions";
 @import './abstracts/variables';
+
+// Bootstrap
 @import "../../node_modules/bootstrap/scss/bootstrap";
 
 // h1 {
